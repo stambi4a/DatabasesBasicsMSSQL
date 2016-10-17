@@ -1,0 +1,31 @@
+--Use Master
+--CREATE DATABASE Orders
+--GO
+
+--Use Orders
+--CREATE TABLE Orders(
+--Id INT PRIMARY KEY IDENTITY(1,1),
+--ProductName VARCHAR(50),
+--OrderDate DATETIME
+--)
+--GO
+
+--INSERT Orders
+--(ProductName, OrderDate)
+--VALUES('Butter', CAST('2016-09-19 00:00:00.000' AS DATE))
+--INSERT Orders
+--(ProductName, OrderDate)
+--VALUES('Milk', CAST('2016-09-30 00:00:00.000' AS DATE))
+--INSERT Orders
+--(ProductName, OrderDate)
+--VALUES('Cheese', CAST('2016-09-04 00:00:00.000' AS DATE))
+--INSERT Orders
+--(ProductName, OrderDate)
+--VALUES('Bread', CAST('2015-12-20 00:00:00.000' AS DATE))
+--INSERT Orders
+--(ProductName, OrderDate)
+--VALUES('Tomatoes', CAST('2015-12-30 00:00:00.000' AS DATE))
+--GO
+
+--SELECT ProductName, OrderDate,	DATEADD(DAY, 3, OrderDate) AS "Pay Due", DATEADD(MONTH, 1, OrderDate) AS "Deliver Due"
+--FROM Orders

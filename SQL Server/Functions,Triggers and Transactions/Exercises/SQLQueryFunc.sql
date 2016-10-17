@@ -1,0 +1,47 @@
+--CREATE FUNCTION ufn_IsWordComprised
+--  (
+--  @setOfLetters nvarchar(max), 
+--  @word nvarchar(max)
+--  )
+--RETURNS bit
+--AS
+--BEGIN 
+--    DECLARE @l int = 1;
+--    WHILE LEN(@word) > @l
+--    BEGIN
+--      DECLARE @charindex int; 
+--      DECLARE @letter char(1);
+--      SET @letter = SUBSTRING(@word, @l, 1)
+--      SET @charindex = CHARINDEX(@letter, @setOfLetters, 0)
+--      IF @charindex = 0
+--      BEGIN 
+--        RETURN 0
+--      END
+--      SET @l += 1;
+--    END
+
+--    RETURN 1
+--END
+
+SELECT dbo.ufn_IsWordComprisedOf('oistmiahf', 'Sofia');
+--SELECT dbo.ufn_IsWordComprised('oistmiahf', 'halves');
+--SELECT dbo.ufn_IsWordComprised('bobr', 'rob');
+--SELECT dbo.ufn_IsWordComprised('pppp', 'Guy');
+
+--CREATE FUNCTION ufn_isWordComprisedOf(@setOfLetters NVARCHAR(max), @word NVARCHAR(max))
+--RETURNS BIT
+--AS
+--BEGIN
+--	DECLARE @wordLength INT, @index INT, @result BIT, @letter NCHAR
+--	SET @wordLength = LEN(@word);
+--	SET @index = 0;
+--	SET @result = 1;
+--	WHILE @index < @wordLength
+--	BEGIN 
+--		SET @letter = SUBSTRING(@word, @index, 1);
+--		IF CHARINDEX(@letter, @setOfLetters) = 0 
+--		RETURN 0;
+--		SET @index = @index + 1;
+--	END
+--RETURN @result;
+--END
